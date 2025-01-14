@@ -7,11 +7,11 @@ import plotly.express as px
 import csv
 def get_dataset():
     list=[]
-
+    #recuperation des données
     file ='product.tsv'
     file_reader = pd.read_csv(file,sep='\t',encoding='utf-8')
     file_reader = file_reader[['Product Price','Product Reviews Count','Product Available Inventory']]
-    print('zzzez',file_reader)
+
     #calcul des moyenne
     moyenne_prix = file_reader['Product Price'].mean()
     quantity = file_reader['Product Reviews Count'].mean()
